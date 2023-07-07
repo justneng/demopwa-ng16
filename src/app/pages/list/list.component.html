@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/iconv2.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        Progressive Web Test
+      </a>
+    </div>
+  </nav>
+  <div class="row my-3">
+    <div class="col">
+      <button class="btn btn-primary" (click)="reload()">What's New</button>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">ALBUM_ID</th>
+          <th scope="col">ID</th>
+          <th scope="col">TITLE</th>
+          <th scope="col">URL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of photos()">
+          <th scope="col">
+            <img [src]="item['thumbnailUrl']" width="75" height="75" alt="photo">
+          </th>
+          <th scope="row">{{item['albumId']}}</th>
+          <td>{{item['id']}}</td>
+          <td>{{item['title']}}</td>
+          <td>{{item['url']}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
