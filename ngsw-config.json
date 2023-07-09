@@ -30,7 +30,7 @@
   "dataGroups": [
     {
       "name": "api-freshness",
-      "urls": ["https://jsonplaceholder.typicode.com/photos"],
+      "urls": ["https://justneng.github.io/movies.json"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,

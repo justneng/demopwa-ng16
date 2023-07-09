@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/demopwa-ng16",
     "ignore": [
       "firebase.json",
       "**/.*",
