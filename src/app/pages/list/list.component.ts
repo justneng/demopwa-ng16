@@ -9,6 +9,7 @@ import {HttpClient} from "@angular/common/http";
 export class ListComponent implements OnInit {
 
   photos = signal([]);
+  isFetching: boolean = false;
 
   constructor(private http: HttpClient) {
   }
@@ -22,10 +23,14 @@ export class ListComponent implements OnInit {
     //   .subscribe(value => {
     //     this.movies.set(value as []);
     //   });
+    this.isFetching = true;
     this.http.get('https://jsonplaceholder.typicode.com/photos')
       .subscribe(value => {
-        let slice = (value as []).slice(0, 5);
+        let slice = (value as []).slice(0, 2);
         this.photos.set(slice);
+        this.isFetching = false;
+      }, error => {
+        this.isFetching = false;
       });
   }
 }
