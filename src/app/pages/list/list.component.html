@@ -20,22 +20,20 @@
       <table class="table">
         <thead>
         <tr>
-          <th scope="col"></th>
-          <th scope="col">ALBUM_ID</th>
-          <th scope="col">ID</th>
-          <th scope="col">TITLE</th>
-          <th scope="col">URL</th>
+          <th scope="col">Title</th>
+          <th scope="col">Distributor</th>
+          <th scope="col">Worldwide Gross</th>
+          <th scope="col">Director</th>
+          <th scope="col">Release Date</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of photos()">
-          <th scope="col">
-            <img [src]="item['thumbnailUrl']" width="75" height="75" alt="photo">
-          </th>
-          <th scope="row">{{item['albumId']}}</th>
-          <td>{{item['id']}}</td>
-          <td>{{item['title']}}</td>
-          <td>{{item['url']}}</td>
+        <tr *ngFor="let item of movies()">
+          <td>{{item['Title']}}</td>
+          <td>{{item['Director']}}</td>
+          <td>{{item['Worldwide_Gross'] | number}}</td>
+          <td>{{item['Director']}}</td>
+          <td>{{item['Release_Date']}}</td>
         </tr>
       </table>
     </div>
