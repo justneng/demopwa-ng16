@@ -30,7 +30,7 @@
   "dataGroups": [
     {
       "name": "api-freshness",
-      "urls": ["https://justneng.github.io/"],
+      "urls": ["/**/*.json"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 5,
